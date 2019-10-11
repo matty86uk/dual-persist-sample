@@ -1,0 +1,13 @@
+version: '3'
+services:
+  db2:
+    image: db2-demo:latest
+    ports:
+      - "50000:50000"
+  oracledb:
+    image: oracle-demo:latest
+    environment:
+      - ORACLE_ALLOW_REMOTE=true
+    ports:
+      - "1521:1521"
+
